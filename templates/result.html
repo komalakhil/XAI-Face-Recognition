@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result Page</title>
+</head>
+<body>
+    <h1>Result Page</h1>
+    <div id="result-data" >
+    </div>
+
+    <script>
+        // Define a function to display JSON data
+        function displayData() {
+            // Get the JSON data from the Flask template variable
+            var jsonData = {{ data | tojson | safe }};
+            
+            // Access and display the JSON data
+            var resultDataDiv = document.getElementById('result-data');
+            var data = jsonData.size;
+            resultDataDiv.innerHTML = '<h2>Sales for next 30 days: ' + data + '</h2>';
+        }
+
+        
+        window.onload = displayData;
+    </script>
+    
+</body>
+</html>

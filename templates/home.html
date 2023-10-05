@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Form</title>
+</head>
+<body>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <div class="flex">
+            <h3 class="text-white text-2xl font-mono">Select the image file :</h3>
+            <input type="file" class="file-input file-input-bordered file-input-accent w-full max-w-xs font-mono" name="imageFile" required accept="image/*"/>
+        </div>
+        <br />
+        <div>
+            <h3 class="text-white text-2xl font-mono">Select the size of the image :</h3>
+            <br />
+            <div class="flex gap-4">
+                <input type="radio" name="radio_4" class="radio radio-accent" value="(8,8)" required/>
+                <h2 class="text-white text-2xl font-mono">8*8 size</h2>
+            </div>
+            <br />
+            <div class="flex gap-4">
+                <input type="radio" name="radio_4" class="radio radio-accent" value="(16,16)" required/>
+                <h2 class="text-white text-2xl font-mono">16*16 size</h2>
+            </div>
+            <br />
+            <div class="flex gap-4">
+                <input type="radio" name="radio_4" class="radio radio-accent" value="(32,32)" required/>
+                <h2 class="text-white text-2xl font-mono">32*32 size</h2>
+            </div>
+        </div>
+        <br />
+        <div>
+            <h1 class="text-white text-2xl font-mono">Select the algorithm :</h1>
+            <br />
+            <div class="flex gap-4">
+                <input type="radio" name="radio_5" class="radio radio-accent" value="KNN" required/>
+                <h2 class="text-white text-2xl font-mono">KNN</h2>
+            </div>
+            <br />
+            <div class="flex gap-4">
+                <input type="radio" name="radio_5" class="radio radio-accent" value="SVM" required/>
+                <h2 class="text-white text-2xl font-mono">SVM</h2>
+            </div>
+            <br />
+            <div class="flex gap-4">
+                <input type="radio" name="radio_5" class="radio radio-accent" value="DT" required/>
+                <h2 class="text-white text-2xl font-mono">Decision Tree</h2>
+            </div>
+        </div>
+        <br />
+        <input class="btn btn-outline btn-accent border rounded px-4 py-2 hover:-translate-y-1 hover:scale-110 hover:bg-white hover:text-black duration-300" type="submit" value="Run" />
+        <input type="reset" name="reset">
+    </form>
+</body>
+</html>

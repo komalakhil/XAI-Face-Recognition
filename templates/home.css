@@ -1,0 +1,22 @@
+/* Add your CSS styles here */
+/* Example styles for reference, update as needed */
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.text-white {
+    color: black;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.font-mono {
+    font-family: 'monospace';
+}
+body{
+    background-color: rgb(141, 141, 228);
+}
